@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;--bg:#f3f5fc;--fg:#0f172a;--mu:#5b6678;--card:rgba(255,255,255,.72);--bd:rgba(148,163,184,.35);--grid:#e2e8f0;--ac:#4f46e5}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Manrope,system-ui,sans-serif;color:var(--fg);background:radial-gradient(900px 500px at 8% -5%,rgba(99,102,241,.22),transparent),radial-gradient(800px 500px at 100% 0%,rgba(20,184,166,.16),transparent),var(--bg);background-attachment:fixed}
+.glass{background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid var(--bd);border-radius:1rem;box-shadow:0 10px 30px -12px rgba(30,41,90,.18)}
+.mu{color:var(--mu)}.fade{animation:fade .45s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}}
+@keyframes grow{from{transform:scaleY(0)}}
+.bar{transform-origin:bottom;transform-box:fill-box;animation:grow .6s ease both;transition:opacity .15s}.bar:hover{opacity:.75}
+.dot{transition:r .15s}.dot:hover{r:7}
+.inp{background:transparent;border:1px solid var(--bd);border-radius:.6rem;padding:.35rem .6rem;color:inherit;font:inherit;font-size:.85rem}
+select option{color:#0f172a}
+table{width:100%;font-size:.78rem;border-collapse:collapse}th{text-align:left;font-weight:600;color:var(--mu);white-space:nowrap}
+th,td{padding:.45rem .6rem;border-bottom:1px solid var(--bd)}tbody tr:hover{background:rgba(99,102,241,.07)}
+.nav{display:flex;align-items:center;gap:.65rem;padding:.55rem .75rem;border-radius:.7rem;font-size:.85rem;font-weight:600;color:var(--mu);white-space:nowrap;transition:background .15s,color .15s}
+.nav:hover{background:rgba(99,102,241,.1);color:var(--fg)}.nav.on{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;box-shadow:0 6px 16px -6px #4f46e5}
+.btn{padding:.4rem .9rem;border-radius:.6rem;font-size:.8rem;font-weight:600;border:1px solid var(--bd);transition:background .15s}.btn:hover{background:rgba(99,102,241,.12)}
+.btn.on{background:#4f46e5;color:#fff;border-color:#4f46e5}
+input[type=range]{accent-color:#4f46e5;width:100%}
+@media(max-width:767px){.nav{justify-content:center;padding:.65rem 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
